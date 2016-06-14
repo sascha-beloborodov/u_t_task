@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 Hello
+    table.table
+        tr
+            td Id
+            td Phone
+            td Email
+            td 
+        each row, i in data
+            tr
+                td #{row.id}
+                td #{row.phone}
+                td #{row.email}
+                td
+                    a.btn.btn-primary(href='/phoneemail/rememberphone/#{row.id}') Remember phone
